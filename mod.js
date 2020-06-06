@@ -11,6 +11,8 @@ export async function uuid(username, timestamp) {
 
 	const data = await fetch('https://api.mojang.com/users/profiles/minecraft/' + username + '?at=' + timestamp)
 
+	if (data.status === 204) throw 'invalid username'
+
 	return data.json()
 }
 
