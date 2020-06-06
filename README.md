@@ -3,7 +3,7 @@ Simple and lightweight Mojang API wrapper.
 
 ## Usage
 ```js
-import { status, uuid, history, names, textures, blocked, statistics } from './mod.js' // import the mojang module
+import { status, uuid, history, names, textures, blocked, statistics } from 'https://deno.land/x/mojang/mod.js' // import the mojang module
 
 console.log(await status()) // returns status of various Mojang services
 console.log(await uuid('Notch')) // returns the UUID of the name at the timestamp provided, default is Date.now()
